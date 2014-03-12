@@ -9,13 +9,11 @@
 
 // "Random Numbers: Good Ones are Hard to Find" can be retrieved from
 // http://www.cems.uwe.ac.uk/~irjohnso/coursenotes/ufeen8-15-m/p1192-parkmiller.pdf
-
 #include<iostream>
 #include<string>
 #include<iomanip>
 #include<ctime>
 #include<cmath>
-
 
 using namespace std;
 //------------------------------------------------------------------------------------------
@@ -25,18 +23,14 @@ using namespace std;
 	// in the sequence. 
 	// Is used by my_rand()
 	unsigned int NEXT_MY_RAND = 1;
-
 	// The upper bound for my_rand() random number generator
 	int MY_RAND_MAX =16807;
 //-------------------------------------------------------------------------------------------------------
 //---------------Prototypes---------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------
 void randomize(int seed = 0);
-
 double my_rand_0_1(void);
-
 int my_rand_int(void);
-
 void my_srand(unsigned int seed);
 
 //-----------------------------------------------------------------------------------------------------
@@ -48,20 +42,16 @@ int main()
 {
 	// Sets seed of the my_rand() function to the time at which it is called 
 	randomize();
-
+        // Outputs two columns of k random numbers
 	cout << "Random numbers" << setw(33) << "Random integers between" 
 	     << "\nbetween 0 and 1" << setw(26) << "1 and MY_RAND_MAX" << endl << endl;
-
-	// Outputs two columns of k random numbers
 	int k = 10;
 	for(int i = 0; i <= k; i++)
 	{
 		cout << fixed << setw(2) << setprecision(3) << my_rand_0_1() << setw(25) 
 		     << my_rand_int() << endl;
 	}
-
 	cout << endl << endl;
-
 	return 0;
 
 }
