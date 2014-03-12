@@ -50,14 +50,14 @@ int main()
 	randomize();
 
 	cout << "Random numbers" << setw(33) << "Random integers between" 
-		 << "\nbetween 0 and 1" << setw(26) << "1 and MY_RAND_MAX" << endl << endl;
+	     << "\nbetween 0 and 1" << setw(26) << "1 and MY_RAND_MAX" << endl << endl;
 
 	// Outputs two columns of k random numbers
 	int k = 10;
 	for(int i = 0; i <= k; i++)
 	{
 		cout << fixed << setw(2) << setprecision(3) << my_rand_0_1() << setw(25) 
-			 << my_rand_int() << endl;
+		     << my_rand_int() << endl;
 	}
 
 	cout << endl << endl;
@@ -108,12 +108,12 @@ double my_rand_0_1(void)
 	// Generates a random number between 1 and 0.
 
 	long double a = MY_RAND_MAX,
-				m = 2147483647.0,
-				q = 127773.0,
-				r = 2836.0,
-				lo,
-				hi, 
-				test;
+		    m = 2147483647.0,
+		    q = 127773.0,
+		    r = 2836.0,
+		    lo,
+		    hi, 
+		    test;
 
     hi = floor((NEXT_MY_RAND / 127773.0) + 0.5); 
     lo = NEXT_MY_RAND - q * hi;
