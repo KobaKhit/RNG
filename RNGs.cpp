@@ -38,7 +38,6 @@ void my_srand(unsigned int seed);
 //-----------------------------------------------------------------------------------------------------
 
 int main()
-
 {
 	// Sets seed of the my_rand() function to the time at which it is called 
 	randomize();
