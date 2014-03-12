@@ -115,7 +115,7 @@ double my_rand_0_1(void)
 				hi, 
 				test;
 
-    hi = floor((NEXT_MY_RAND / 127773.0) + 0.5); // is equivalent to Trunc(seed/q) in the original algorithm
+    hi = floor((NEXT_MY_RAND / 127773.0) + 0.5); 
     lo = NEXT_MY_RAND - q * hi;
     test = a * lo - r * hi;
 
@@ -133,7 +133,7 @@ int my_rand_int(void)
 	// Generates a random integer between 1 and a global variable MY_RAND_MAX.
 
 	// random integer between 1 and a where a is MY_RAND_MAX
-	int random_int = floor(my_rand_0_1() * MY_RAND_MAX + 0.5); 
+	int random_int = floor(my_rand_0_1() * MY_RAND_MAX + 0.5); // truncates to nearest integer
 	
 	return(random_int);
 }
